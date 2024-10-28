@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -14,13 +17,14 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
+      <span class="header_rec-text" aria-hidden="true">rec</span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
             <button
               class="header__theme-menu-button header__theme-menu-button_type_light"
             >
-              День
+              день
             </button>
           </li>
           <li class="header__theme-menu-item">
@@ -28,23 +32,22 @@
               class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
               disabled
             >
-              Авто
+              авто
             </button>
           </li>
           <li class="header__theme-menu-item">
             <button
               class="header__theme-menu-button header__theme-menu-button_type_dark"
             >
-              Неон
+              неон
             </button>
           </li>
         </ul>
       </nav>
-      <span class="header_rec_text">rec</span>
       <div class="header_title-div">
         <h1 class="header_title">no focus</h1>
-        <p class="header_subtitle subtitle_decoration">
-          Что делать, когда не можешь делать ничего <br />
+        <p class="header_subtitle title_decoration">
+          Что делать, когда не можешь делать ничего<br />
           Или почему нам так сложно сконцентрироваться, особенно когда очень
           надо
         </p>
@@ -58,6 +61,6 @@
       <section class="section"></section>
       <section class="section"></section>
     </main>
-    <footer class="footer decorated-zone"></footer>
+    <!-- <footer class="footer decorated-zone"></footer> -->
   </body>
 </html>
