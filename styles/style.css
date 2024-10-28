@@ -228,7 +228,7 @@
 
 /* section adapt */
 
-@media (width < 768px) and (width >= 375px) {
+@media (width < 768px) and (width >= 100px) {
   .section--flex {
     flex-direction: column;
 }
