@@ -349,7 +349,7 @@
   position: relative;
   text-align: center;
   text-shadow: 2px 2px 0px var(--title-effect);
-  width: 100%;
+  min-height: 100vh;
 }
 
 .footer_title {
@@ -376,6 +376,5 @@
   .footer {
     margin-top: 40px;
     padding: 262px 10px;
-    min-height: 100vh;
   }
 }
