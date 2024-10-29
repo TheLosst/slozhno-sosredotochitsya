@@ -177,14 +177,14 @@
 
 .section-1 .section_title {
   flex: 0 0 auto;
-  width: 33%;
+  width: 40%;
 }
 
 .section-1 .section_list {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
-  width: 66%;
+  width: 60%;
   gap: 20px;
 }
 

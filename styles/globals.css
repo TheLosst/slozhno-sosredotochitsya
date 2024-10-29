@@ -13,6 +13,7 @@ body {
   min-inline-size: 375px;
   max-inline-size: 1024px;
   margin: 0 auto;
+  background-attachment: fixed;
 }
 
 h1,
