@@ -299,6 +299,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto repeat(3, 1fr);
+    transform: scaleY(0.75); /* уменьшаем размер только по высоте на 25% */
+    transform-origin: top;
   }
 
   .section-images .section_list-item_title {
