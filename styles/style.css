@@ -282,11 +282,6 @@
 
 /* Section 4 */
 
-.section-images .section_list-item_title {
-  width: 100%;
-  text-align: left;
-}
-
 /* ad */
 
 .section-images {
@@ -297,6 +292,8 @@
 .section-images .section_list-item_title {
   grid-column: 1 / -1; /* Растягиваем заголовок на всю ширину грида */
   margin-bottom: 0; /* Убираем нижний отступ, если он есть */
+  width: 100%;
+  text-align: left;
 }
 
 @media (width >= 768px) {
