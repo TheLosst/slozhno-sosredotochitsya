@@ -240,11 +240,11 @@
 
 @media (width < 1024px) and (width >= 768px) {
   .section-1 .section_title {
-    width: 25%;
+    width: 30%;
     padding-right: 20px;
   }
   .section-1 .section_list {
-    width: 75%;
+    width: 70%;
   }
 }
 
