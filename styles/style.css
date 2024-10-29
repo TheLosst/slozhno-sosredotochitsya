@@ -184,14 +184,14 @@
 
 .section-1 .section_title {
   flex: 0 0 auto;
-  width: 40%;
+  width: 30%;
 }
 
 .section-1 .section_list {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
-  width: 60%;
+  width: 70%;
   gap: 20px;
 }
 
@@ -227,7 +227,7 @@
 
 /* section1 adapt */
 
-@media (width < 768px) and (width >= 375px) {
+@media (width <= 768px) and (width >= 375px) {
   .section-1 {
     flex-direction: column;
   }
