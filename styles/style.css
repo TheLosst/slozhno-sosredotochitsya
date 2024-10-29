@@ -1,18 +1,18 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background: var(--background-image) no-repeat top center,
     var(--background-color);
   background-size: auto 768px;
   color: var(--main-text-color);
-  background-attachment: fixed;
 }
 
 .header {
   padding: 0 20px;
   position: relative;
-  width: 100%;
+  min-height: 100vh;
 }
 
 .header__theme-menu {
@@ -376,5 +376,6 @@
   .footer {
     margin-top: 40px;
     padding: 262px 10px;
+    min-height: 100vh;
   }
 }
