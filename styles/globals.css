@@ -1,5 +1,9 @@
 /* Глобальные стили для проекта, их можно дополнять и менять по желанию */
 
+.page {
+  background-attachment: fixed !important;
+}
+
 *,
 *::before,
 *::after {
