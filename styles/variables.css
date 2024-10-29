@@ -4,7 +4,7 @@
 */
 
 :root {
-  --font-family: "IBM Plex mono"
+  --font-family: "IBM Plex mono";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,7 +25,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root  {
+  :root {
     --background-image: url(../images/cover-image-light.png);
     --background-color: #fff1f7;
     --main-text-color: #353430;
@@ -33,11 +33,10 @@
     --corner-color: #353430;
     --hover-color: 1px solid rgba(50, 49, 45, 0.4);
     --title-color: #ffc2e6;
-    --title-effect:  #ff0070;
+    --title-effect: #ff0070;
     --subtitle-color: #353430;
     --title-decoration: #ff8dcb;
     --section-title-color: #353430;
     --link-effect: #ffc2e6;
   }
-
 }

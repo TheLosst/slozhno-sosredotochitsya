@@ -2,11 +2,11 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background: var(--background-image) no-repeat top center, var(--background-color);
+  background: var(--background-image) no-repeat top center,
+    var(--background-color);
   background-size: auto 768px;
   color: var(--main-text-color);
   background-attachment: fixed;
-
 }
 
 .header {
@@ -22,7 +22,6 @@
   display: flex;
   gap: 12px;
   justify-content: center;
-  
 }
 
 .header__theme-menu-button {
@@ -154,7 +153,6 @@
   }
 }
 
-
 /* main & sectoins */
 
 .main {
@@ -168,26 +166,26 @@
 
 .section {
   line-height: 1.3;
+  display: block;
 }
 
-.section--flex {
+.section-1 {
   display: flex;
   justify-content: space-between;
 }
 
-.section--flex .section_title {
+.section-1 .section_title {
   flex: 0 0 auto;
   width: 33%;
 }
 
-.section--flex .section_list {
+.section-1 .section_list {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
   width: 66%;
   gap: 20px;
 }
-
 
 .section_title {
   font-size: 18px;
@@ -226,29 +224,160 @@
   outline: 1px solid var(--main-text-color);
 }
 
-/* section adapt */
+/* section1 adapt */
 
-@media (width < 768px) and (width >= 100px) {
-  .section--flex {
+@media (width < 768px) and (width >= 375px) {
+  .section-1 {
     flex-direction: column;
-}
-.section--flex .section_title,
-.section--flex .section_list {
+  }
+  .section-1 .section_title,
+  .section-1 .section_list {
     width: 100%;
     margin-bottom: 20px;
-  /* Занимает всю ширину родителя */
-}
+  }
 }
 
 @media (width < 1024px) and (width >= 768px) {
-  .section--flex .section_title {
+  .section-1 .section_title {
     width: 25%;
     padding-right: 20px;
   }
-  .section--flex .section_list {
+  .section-1 .section_list {
     width: 75%;
   }
 }
 
+/* Section 2 */
+.section-2 {
+  display: flex;
+  flex-direction: column;
+}
 
+.section-2 .section_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
 
+.section-2 .section_list-item {
+  flex-basis: calc(33.33% - 20px);
+}
+
+/* section2 adapt */
+
+@media (width < 1024px) and (width >=375px) {
+  .section-2 .section_list {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Section 3 */
+
+.title_normal {
+  font-weight: normal;
+}
+
+/* Section 4 */
+
+.section-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-images .section_list-item_title {
+  width: 100%;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .section-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+
+  .section-images .section_list-item_title {
+    grid-column: 1 / -1;
+  }
+
+  .section-images .section_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.section-images .section_image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/*2 ячейки по горизонтали*/
+.section-images .section_image:nth-of-type(1) {
+  grid-column: 1 / 3;
+  grid-row: 2;
+}
+
+/*2 ячейки по вертикали*/
+.section-images .section_image:nth-of-type(2) {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+
+/*2 ячейки по вертикали*/
+.section-images .section_image:nth-of-type(3) {
+  grid-column: 1;
+  grid-row: 3 / 5;
+}
+
+/* 1 ячейка*/
+.section-images .section_image:nth-of-type(4) {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/*2 ячейки по горизонтали*/
+.section-images .section_image:nth-of-type(5) {
+  grid-column: 2 / 4;
+  grid-row: 4;
+}
+
+/* Footer */
+
+.footer {
+  padding: 282px 20px;
+  position: relative;
+  text-align: center;
+  text-shadow: 2px 2px 0px var(--title-effect);
+}
+
+.footer_title {
+  font-weight: 700;
+  color: var(--title-color);
+  font-size: clamp(7.5rem, 0.5rem + 14vw, 9.8rem);
+  text-shadow: 4px 4px 0px var(--title-effect);
+}
+
+/* Footer adapt */
+@media (width < 768px) and (width >= 375px) {
+  .footer_title {
+    font-size: clamp(7.25rem, 7rem + 1vw, 7.5rem);
+  }
+}
+
+@media (width < 1024px) and (width >= 768px) {
+  .footer {
+    padding: 434px 20px;
+  }
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .footer {
+    margin-top: 40px;
+    padding: 262px 10px;
+  }
+}
