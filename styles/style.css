@@ -169,6 +169,7 @@
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 20px;
+  width: 30%;
   color: var(--section-title-color);
 }
 
@@ -184,7 +185,6 @@
 
 .section-1 .section_title {
   flex: 0 0 auto;
-  width: 30%;
 }
 
 .section-1 .section_list {
