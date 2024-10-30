@@ -318,7 +318,7 @@
   }
 }
 
-@media (width <= 768px) {
+@media (width < 768px) {
   .section-images {
     display: flex;
     flex-direction: column;
@@ -326,7 +326,7 @@
   }
 }
 
-@media (width <= 768px) {
+@media (width < 768px) {
   .section-images .section_image {
     width: 100%;
     height: auto;
