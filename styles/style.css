@@ -188,12 +188,16 @@
   flex: 0 0 auto;
 }
 
+.section-1 .section_list:first-of-type {
+  gap: 18px;
+}
+
 .section-1 .section_list {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
   width: 65%;
-  gap: 25px;
+  gap: 24px;
 }
 
 .section_list {
@@ -268,7 +272,7 @@
 @media (width < 1024px) and (width >=375px) {
   .section-2 .section_list {
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
   }
 }
 
