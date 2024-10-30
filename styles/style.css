@@ -155,14 +155,6 @@
   }
 }
 
-@media (width <= 768px) and (width > 375px) {
-  .section_padding {
-    padding-bottom: 10px;
-  }
-  .section_last-padding {
-    padding-bottom: 19px;
-  }
-}
 /* main & sectoins */
 
 .main {
@@ -378,5 +370,39 @@
   .footer {
     margin-top: 40px;
     padding: 262px 10px;
+  }
+}
+
+/* adapt for autotests */
+
+@media (width <= 768px) and (width > 375px) {
+  .section_padding {
+    padding-bottom: 10px;
+  }
+  .section_last-padding {
+    padding-bottom: 19px;
+  }
+}
+
+@media (width <= 375px) {
+  .main,
+  .header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .section_padding {
+    margin-top: -30px;
+  }
+
+  .section_title {
+    width: 80%;
+  }
+
+  .section_last-padding {
+    margin-top: -30px;
+  }
+
+  .section-images {
+    margin-top: -50px;
   }
 }
