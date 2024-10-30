@@ -398,9 +398,9 @@
     width: 80%;
   }
 
-  /* .section_last-padding {
-    margin-top: -30px;
-  } */
+  .section_last-padding {
+    margin-top: -14px;
+  }
 
   .section-images {
     margin-top: -50px;
