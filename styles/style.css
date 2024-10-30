@@ -155,11 +155,6 @@
   }
 }
 
-@media (width <= 768px) and (width > 375px) {
-  .header_title {
-    padding-bottom: 27px;
-  }
-}
 /* main & sectoins */
 
 .main {
