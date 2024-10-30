@@ -269,10 +269,10 @@
 
 /* section2 adapt */
 
-@media (width < 1024px) and (width >=375px) {
+@media (width < 1024px) and (width >375px) {
   .section-2 .section_list {
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
   }
 }
 
@@ -404,6 +404,11 @@
 
   .section_last-padding {
     margin-top: -14px;
+  }
+
+  .section-2 .section_list {
+    flex-direction: column;
+    gap: 24px;
   }
 
   .section-images {
