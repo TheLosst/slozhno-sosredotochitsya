@@ -97,13 +97,13 @@
 
 /* theme-menu adapt */
 
-@media (width < 1024px) and (width >=768px) {
+@media (width <= 1024px) and (width >=768px) {
   .header__theme-menu {
     padding-top: 190px;
   }
 }
 
-@media (width < 768px) and (width >=375px) {
+@media (width <= 768px) and (width >=375px) {
   .header__theme-menu {
     padding-top: 75px;
   }
@@ -116,7 +116,7 @@
   }
 }
 
-@media (width < 768px) and (width >=375px) {
+@media (width <= 768px) and (width >=375px) {
   .header__theme-menu-list {
     gap: 11px;
   }
@@ -124,21 +124,21 @@
 
 /* header_title adapt */
 
-@media (width < 1024px) and (width >=768px) {
+@media (width <= 1024px) and (width >=768px) {
   .header_title-div {
     padding: 150px 0 183px;
     gap: 133px;
   }
 }
 
-@media (width < 768px) and (width >=375px) {
+@media (width <= 768px) and (width >=375px) {
   .header_title-div {
     padding: 70px 0 74px;
     gap: 57px;
   }
 }
 
-@media (width < 768px) and (width >=375px) {
+@media (width <= 768px) and (width >=375px) {
   .header_title {
     font-size: clamp(7.25rem, 7rem + 1vw, 7.5rem);
     margin-left: 0;
@@ -227,7 +227,7 @@
 
 /* section1 adapt */
 
-@media (width <= 768px) and (width >= 375px) {
+@media (width < 768px) and (width >= 375px) {
   .section-1 {
     flex-direction: column;
   }
@@ -238,7 +238,7 @@
   }
 }
 
-@media (width < 1024px) and (width >= 768px) {
+@media (width <= 1024px) and (width >= 768px) {
   .section-1 .section_title {
     width: 35%;
     padding-right: 20px;
@@ -264,7 +264,7 @@
 
 /* section2 adapt */
 
-@media (width < 1024px) and (width >=375px) {
+@media (width <= 1024px) and (width >=375px) {
   .section-2 .section_list {
     flex-direction: column;
     gap: 20px;
@@ -318,7 +318,7 @@
   }
 }
 
-@media (width < 768px) {
+@media (width <= 768px) {
   .section-images {
     display: flex;
     flex-direction: column;
@@ -326,7 +326,7 @@
   }
 }
 
-@media (width < 768px) {
+@media (width <= 768px) {
   .section-images .section_image {
     width: 100%;
     height: auto;
@@ -351,19 +351,19 @@
 }
 
 /* Footer adapt */
-@media (width < 768px) and (width >= 375px) {
+@media (width <= 768px) and (width >= 375px) {
   .footer_title {
     font-size: clamp(7.25rem, 7rem + 1vw, 7.5rem);
   }
 }
 
-@media (width < 1024px) and (width >= 768px) {
+@media (width <= 1024px) and (width >= 768px) {
   .footer {
     padding: 434px 20px;
   }
 }
 
-@media (width < 768px) and (width >= 375px) {
+@media (width <= 768px) and (width >= 375px) {
   .footer {
     margin-top: 40px;
     padding: 262px 10px;
