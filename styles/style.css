@@ -221,7 +221,8 @@
 
 .section-images {
   display: grid;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 19px;
 }
 
 .section-images .section_list-item_title {
@@ -229,11 +230,6 @@
   margin-bottom: 0;
   width: 100%;
   text-align: left;
-}
-
-.section-images {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px 19px;
 }
 
 /* Добавил правила для изображений основному селектору */
@@ -288,13 +284,10 @@
     align-items: flex-end;
   }
 
-  /* .header > *:first-child {
-    margin-bottom: 172px;
-  } */
-
   .header_title-div {
     padding: 0px;
     gap: 0px;
+    margin-top: 150px;
   }
 
   .header_title {
@@ -307,10 +300,6 @@
 
   .header__theme-menu {
     margin-top: 172px;
-  }
-
-  .header_title-div {
-    margin-top: 150px;
   }
 
   .header_subtitle {
