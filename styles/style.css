@@ -5,7 +5,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background: var(--background-image) no-repeat top center,
     var(--background-color);
-  background-size: cover;
+  background-size: auto cover;
   /* Поменял на cover */
   color: var(--main-text-color);
 }
@@ -110,7 +110,7 @@
   margin-left: -2%;
 }
 
-.header_title-div {
+.header_title-content {
   display: flex;
   flex-direction: column;
   padding: 238px 0 136px;
@@ -219,13 +219,13 @@
   font-weight: normal;
 }
 
-.section-images {
+.section:last-of-type {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px 19px;
 }
 
-.section-images .section_list-item_title {
+.section:last-of-type .section_list-item_title {
   grid-column: 1 / -1;
   margin-bottom: 0;
   width: 100%;
@@ -234,20 +234,20 @@
 
 /* Добавил правила для изображений основному селектору */
 
-.section-images .section_image {
+.section:last-of-type .section_image {
   object-fit: cover;
   object-position: center;
   width: 100%;
   height: 100%;
 }
 
-.section-images img:first-of-type,
-.section-images img:last-of-type {
+.section:last-of-type img:first-of-type,
+.section:last-of-type img:last-of-type {
   grid-column: span 2;
 }
 
-.section-images img:nth-of-type(2),
-.section-images img:nth-of-type(3) {
+.section:last-of-type img:nth-of-type(2),
+.section:last-of-type img:nth-of-type(3) {
   grid-row: span 2;
 }
 
@@ -280,11 +280,10 @@
   .header {
     display: flex;
     flex-direction: column;
-    /* gap: 173px; */
     align-items: flex-end;
   }
 
-  .header_title-div {
+  .header_title-content {
     padding: 0px;
     gap: 0px;
     margin-top: 150px;
@@ -326,11 +325,80 @@
 
 @media (width <= 767px) {
   /* 375*/
-  .header__theme-menu-list {
-    display: none;
+  .decorated-zone::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-left: 1px solid var(--corner-color);
+    border-bottom: 1px solid var(--corner-color);
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .decorated-zone::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-right: 1px solid var(--corner-color);
+    border-top: 1px solid var(--corner-color);
+    right: 10px;
+    top: 10px;
+  }
+
+  .header {
+    padding: 0 10px;
+  }
+  .header_title {
+    margin-left: 0px;
+    line-height: 95.7px;
+  }
+
+  .header_title-content {
+    padding: 0px;
+    gap: 0px;
+    margin-top: 65px;
+  }
+
+  .header__theme-menu {
+    margin-top: 55px;
+  }
+
+  .header_subtitle {
+    margin-top: 58px;
+    width: inherit;
+    margin-left: 1%;
+  }
+
+  .section:nth-of-type(1),
+  .section:nth-of-type(3) {
+    flex-direction: column;
+  }
+  .section:nth-of-type(1) .section_title,
+  .section:nth-of-type(3) .section_title,
+  .section:nth-of-type(1) .section_list,
+  .section:nth-of-type(3) .section_list,
+  .section_title {
+    width: 100%;
+  }
+
+  .main {
+    padding: 0 10px;
+    margin: 40px 0;
+    gap: 51px;
+  }
+
+  .section:last-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer {
+    padding: 0;
   }
 }
-
 /* @media (width <= 375px) {
   .decorated-zone::before {
     content: "";
