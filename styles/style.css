@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-attachment: fixed !important;
+  background-attachment: fixed; /* Это было для автотестов, но он все еще не видит background-attachment: fixed */
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background: var(--background-image) no-repeat top center,
     var(--background-color);
