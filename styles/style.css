@@ -305,8 +305,33 @@
     font-size: 120px;
   }
 
+  .header__theme-menu {
+    margin-top: 172px;
+  }
+
+  .header_title-div {
+    margin-top: 150px;
+  }
+
+  .header_subtitle {
+    margin-top: 130px;
+  }
+
   .header__theme-menu-list {
     flex-direction: column;
+  }
+
+  .section:nth-of-type(1) .section_list,
+  .section:nth-of-type(3) .section_list {
+    width: 65%;
+  }
+
+  .section:nth-of-type(2) .section_list {
+    flex-direction: column;
+  }
+
+  .section:nth-of-type(3) .section_title {
+    width: 32%;
   }
 }
 
