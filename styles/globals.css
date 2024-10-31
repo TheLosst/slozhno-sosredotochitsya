@@ -47,53 +47,6 @@ a {
   text-decoration: none;
 }
 
-@media (width <= 375px) {
-  .decorated-zone::before {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-left: 1px solid var(--corner-color);
-    border-bottom: 1px solid var(--corner-color);
-    left: 10px;
-    bottom: 10px;
-  }
-
-  .decorated-zone::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-right: 1px solid var(--corner-color);
-    border-top: 1px solid var(--corner-color);
-    right: 10px;
-    top: 10px;
-  }
-}
-@media (width > 375px) {
-  .decorated-zone::before {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-left: 1px solid var(--corner-color);
-    border-bottom: 1px solid var(--corner-color);
-    left: 20px;
-    bottom: 20px;
-  }
-
-  .decorated-zone::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-right: 1px solid var(--corner-color);
-    border-top: 1px solid var(--corner-color);
-    right: 20px;
-    top: 20px;
-  }
-}
-
 .title_decoration {
   background: var(--title-decoration);
 }

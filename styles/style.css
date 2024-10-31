@@ -1,18 +1,21 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-attachment: fixed !important;
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background: var(--background-image) no-repeat top center,
     var(--background-color);
-  background-size: auto 768px;
+  background-size: cover;
+  /* Поменял на cover */
   color: var(--main-text-color);
 }
 
 .header {
   padding: 0 20px;
   position: relative;
-  min-height: 100vh;
+  min-height: 668px;
+  height: 100vh;
+  /* Добавил height и  min-height */
   display: grid;
 }
 
@@ -44,6 +47,8 @@
 
 .header__theme-menu-button:focus {
   border: none;
+  outline: none;
+  /* Добавил  outline: none */
 }
 
 .header__theme-menu-button:focus-visible {
@@ -96,65 +101,6 @@
   color: var(--subtitle-color);
 }
 
-/* theme-menu adapt */
-
-@media (width < 1024px) and (width >=768px) {
-  .header__theme-menu {
-    padding-top: 190px;
-  }
-}
-
-@media (width < 768px) and (width >=375px) {
-  .header__theme-menu {
-    padding-top: 75px;
-  }
-}
-
-@media (width < 1024px) {
-  .header__theme-menu-list {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-}
-
-@media (width <= 768px) and (width >=375px) {
-  .header__theme-menu-list {
-    gap: 11px;
-  }
-}
-
-/* header_title adapt */
-
-@media (width < 1024px) and (width >=768px) {
-  .header_title-div {
-    padding: 150px 0 183px;
-    gap: 133px;
-  }
-}
-
-@media (width < 768px) and (width >=375px) {
-  .header_title-div {
-    padding: 70px 0 74px;
-    gap: 57px;
-  }
-}
-
-@media (width <= 768px) and (width >=375px) {
-  .header_title {
-    font-size: clamp(7.25rem, 7rem + 1vw, 7.5rem);
-    margin-left: 0;
-    line-height: 82.5%;
-  }
-}
-
-/* header_subtitle adapt */
-
-@media (width < 425px) {
-  .header_subtitle {
-    width: 100%;
-  }
-}
-
 /* main & sectoins */
 
 .main {
@@ -170,30 +116,21 @@
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 20px;
-  width: 30%;
+  line-height: 23.4px;
+  width: 31%;
   color: var(--section-title-color);
+  text-wrap: wrap;
+}
+
+.section-text {
+  font-weight: 400;
+  line-height: 23.4px;
+  font-size: 18px;
 }
 
 .section {
-  line-height: 1.3;
-  display: block;
-}
-
-.section-1 {
   display: flex;
   justify-content: space-between;
-}
-
-.section-1 .section_title {
-  flex: 0 0 auto;
-}
-
-.section-1 .section_list {
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 auto;
-  width: 65%;
-  gap: 20px;
 }
 
 .section_list {
@@ -213,9 +150,34 @@
   color: var(--subtitle-color);
 }
 
+.section:nth-of-type(1) .section_list,
+.section:nth-of-type(3) .section_list {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  width: 66%;
+  gap: 20px;
+}
+.section:nth-of-type(2) {
+  flex-direction: column;
+}
+
+.section:nth-of-type(2) .section_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 20px;
+}
+
+.section:nth-of-type(2) .section_list-item {
+  flex-basis: calc(33.33%);
+}
+
 .section-text-link {
   border: transparent;
-  text-shadow: 3px 3px 0px var(--link-effect);
+  text-shadow: 2px 2px 0 var(--link-effect);
+  /* заменил text-shadow: 3px 3px 0px var(--link-effect); на  text-shadow: 2px 2px 0 var(--link-effect); */
 }
 
 .section-text-link:hover {
@@ -228,59 +190,11 @@
 
 /* section1 adapt */
 
-@media (width < 768px) and (width >= 375px) {
-  .section-1 {
-    flex-direction: column;
-  }
-  .section-1 .section_title,
-  .section-1 .section_list {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
-@media (width < 1024px) and (width >= 768px) {
-  .section-1 .section_title {
-    width: 35%;
-    padding-right: 20px;
-  }
-}
-
-/* Section 2 */
-.section-2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.section-2 .section_list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.section-2 .section_list-item {
-  flex-basis: calc(33.33% - 20px);
-}
-
-/* section2 adapt */
-
-@media (width < 1024px) and (width >=375px) {
-  .section-2 .section_list {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
 /* Section 3 */
 
 .title_normal {
   font-weight: normal;
 }
-
-/* Section 4 */
-
-/* ad */
 
 .section-images {
   display: grid;
@@ -288,50 +202,34 @@
 }
 
 .section-images .section_list-item_title {
-  grid-column: 1 / -1; /* Растягиваем заголовок на всю ширину грида */
-  margin-bottom: 0; /* Убираем нижний отступ, если он есть */
+  grid-column: 1 / -1;
+  margin-bottom: 0;
   width: 100%;
   text-align: left;
 }
 
-@media (width >= 768px) {
-  .section-images {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 19px;
-  }
-
-  .section-images .section_image {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Применяем стили span только к изображениям, а не к заголовку */
-  .section-images img:first-of-type,
-  .section-images img:last-of-type {
-    grid-column: span 2;
-  }
-
-  .section-images img:nth-of-type(2),
-  .section-images img:nth-of-type(3) {
-    grid-row: span 2;
-  }
+.section-images {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 19px;
 }
 
-@media (width < 768px) {
-  .section-images {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+/* Добавил правила для изображений основному селектору */
+
+.section-images .section_image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
 }
 
-@media (width < 768px) {
-  .section-images .section_image {
-    width: 100%;
-    height: auto;
-  }
+.section-images img:first-of-type,
+.section-images img:last-of-type {
+  grid-column: span 2;
+}
+
+.section-images img:nth-of-type(2),
+.section-images img:nth-of-type(3) {
+  grid-row: span 2;
 }
 
 /* Footer */
@@ -343,7 +241,9 @@
   position: relative;
   text-align: center;
   text-shadow: 2px 2px 0px var(--title-effect);
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 668px;
+  /* Добавил height и min-height */
 }
 
 .footer_title {
@@ -353,61 +253,51 @@
   text-shadow: 4px 4px 0px var(--title-effect);
 }
 
-/* Footer adapt */
-@media (width <= 768px) and (width >= 375px) {
-  .footer_title {
-    font-size: clamp(7.25rem, 7rem + 1vw, 7.5rem);
-  }
-}
-
-@media (width < 1024px) and (width >= 768px) {
-  .footer {
-    padding: 434px 20px;
-  }
-}
-
-@media (width <= 768px) and (width > 375px) {
-  .footer {
-    margin-top: 40px;
-    padding: 262px 10px;
-  }
-}
-
-/* adapt for autotests */
-
-@media (width <= 768px) and (width > 375px) {
-  .section_padding {
-    padding-bottom: 10px;
-  }
-  .section_last-padding {
-    padding-bottom: 19px;
-  }
-}
+/* Adapt */
 
 @media (width <= 375px) {
-  .main,
-  .header {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .section_padding {
-    margin-top: -30px;
-  }
-
-  .section_title {
-    width: 80%;
+  .decorated-zone::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-left: 1px solid var(--corner-color);
+    border-bottom: 1px solid var(--corner-color);
+    left: 10px;
+    bottom: 10px;
   }
 
-  .section_last-padding {
-    margin-top: -14px;
+  .decorated-zone::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-right: 1px solid var(--corner-color);
+    border-top: 1px solid var(--corner-color);
+    right: 10px;
+    top: 10px;
+  }
+}
+@media (width > 375px) {
+  .decorated-zone::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-left: 1px solid var(--corner-color);
+    border-bottom: 1px solid var(--corner-color);
+    left: 20px;
+    bottom: 20px;
   }
 
-  .section-images {
-    margin-top: -26px;
-  }
-
-  .footer {
-    margin-top: -21px;
-    padding: 18px 10px;
+  .decorated-zone::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-right: 1px solid var(--corner-color);
+    border-top: 1px solid var(--corner-color);
+    right: 20px;
+    top: 20px;
   }
 }

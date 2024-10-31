@@ -4,6 +4,23 @@
   переключая тему
 */
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-image: url(../images/cover-image-dark.png);
+    --background-color: #000028;
+    --main-text-color: #f1b2ce;
+    --header_rec-text: #ff0070;
+    --corner-color: #ff0070;
+    --hover-color: 1px solid rgba(255, 0, 112, 0.4);
+    --title-color: #db00ff;
+    --title-effect: #ff0070;
+    --subtitle-color: #000028;
+    --title-decoration: #ff0070;
+    --section-title-color: #ff0070;
+    --link-effect: #ff0070;
+  }
+}
+
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
