@@ -1,11 +1,12 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-attachment: fixed; /* Это было для автотестов, но он все еще не видит background-attachment: fixed */
+  /* Это было для автотестов, но он все еще не видит background-attachment: fixed */
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background: var(--background-image) no-repeat top center,
-    var(--background-color);
-  background-size: auto cover;
+  background: var(--background-image) no-repeat top center;
+  background-color: var(--background-color);
+  background-attachment: fixed;
+  background-size: cover;
   /* Поменял на cover */
   color: var(--main-text-color);
 }
@@ -30,6 +31,10 @@
   border-top: 1px solid var(--corner-color);
   right: 20px;
   top: 20px;
+}
+
+.title_decoration {
+  background: var(--title-decoration);
 }
 
 .header {
@@ -70,11 +75,22 @@
 .header__theme-menu-button:focus {
   border: none;
   outline: none;
-  /* Добавил  outline: none */
+  position: relative;
+}
+
+.header__theme-menu-button:focus::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--section-title-color);
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--corners-color);
+  border: none;
+  outline: none;
 }
 
 .header__theme-menu-button_active {
@@ -188,13 +204,14 @@
 .section:nth-of-type(2) .section_list {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 100%;
   gap: 20px;
+  /* Элементы теперь переносятся на новую строку */
 }
 
 .section:nth-of-type(2) .section_list-item {
-  flex-basis: calc(33.33%);
+  flex-basis: calc(33.33% - 20px);
 }
 
 .section-text-link {
@@ -207,7 +224,24 @@
   border-bottom: 1px solid var(--main-text-color);
 }
 
+.section-text-link:focus {
+  border-bottom: 1px var(--main-text-color);
+  outline: none;
+  position: relative;
+}
+
+/* .section-text-link:focus::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--main-text-color);
+} */
+
 .section-text-link:focus-visible {
+  border: none;
   outline: 1px solid var(--main-text-color);
 }
 
@@ -254,7 +288,6 @@
 /* Footer */
 
 .footer {
-  padding: 282px 20px;
   display: grid;
   align-items: center;
   position: relative;
@@ -269,7 +302,7 @@
   font-weight: 700;
   color: var(--title-color);
   font-size: 157px;
-  text-shadow: 4px 4px 0px var(--title-effect);
+  text-shadow: 2px 2px 0 var(--title-effect);
 }
 
 /* Adapt */
@@ -326,25 +359,18 @@
 @media (width <= 767px) {
   /* 375*/
   .decorated-zone::before {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-left: 1px solid var(--corner-color);
-    border-bottom: 1px solid var(--corner-color);
     left: 10px;
     bottom: 10px;
   }
 
   .decorated-zone::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-right: 1px solid var(--corner-color);
-    border-top: 1px solid var(--corner-color);
     right: 10px;
     top: 10px;
+  }
+
+  .header_rec-text {
+    top: 11px;
+    right: 39px;
   }
 
   .header {
@@ -353,11 +379,10 @@
   .header_title {
     margin-left: 0px;
     line-height: 95.7px;
+    font-size: 116px;
   }
 
   .header_title-content {
-    padding: 0px;
-    gap: 0px;
     margin-top: 65px;
   }
 
@@ -397,6 +422,10 @@
 
   .footer {
     padding: 0;
+  }
+
+  .footer_title {
+    font-size: 116px;
   }
 }
 /* @media (width <= 375px) {

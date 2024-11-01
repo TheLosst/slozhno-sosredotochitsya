@@ -17,7 +17,7 @@
     --subtitle-color: #353430;
     --title-decoration: #ff8dcb;
     --section-title-color: #353430;
-    --link-effect: #ffc2e6;
+    --link-effect: #ff8dcb;
   }
 }
 
@@ -37,7 +37,8 @@
   --subtitle-color: #353430;
   --title-decoration: #ff8dcb;
   --section-title-color: #353430;
-  --link-effect: #ffc2e6;
+  --link-effect: #ff8dcb;
+  /* Добавил изменение цвета */
 }
 
 .page.theme_light .header__rec {
