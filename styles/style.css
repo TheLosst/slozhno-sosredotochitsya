@@ -211,7 +211,7 @@
 }
 
 .section:nth-of-type(2) .section_list-item {
-  flex-basis: calc(33.33% - 20px);
+  flex-basis: calc(33.33% - 13.33px);
 }
 
 .section-text-link {
