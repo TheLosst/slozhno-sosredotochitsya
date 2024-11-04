@@ -1,7 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* Это было для автотестов, но он все еще не видит background-attachment: fixed */
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background: var(--background-image) no-repeat top center;
   background-color: var(--background-color);
@@ -121,7 +120,7 @@
 .header_title {
   font-weight: 700;
   color: var(--title-color);
-  font-size: 157px;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   text-shadow: 4px 4px 0px var(--title-effect);
   margin-left: -2%;
 }
@@ -301,7 +300,7 @@
 .footer_title {
   font-weight: 700;
   color: var(--title-color);
-  font-size: 157px;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   text-shadow: 2px 2px 0 var(--title-effect);
 }
 
@@ -323,11 +322,11 @@
   }
 
   .header_title {
-    font-size: 120px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
   .footer_title {
-    font-size: 120px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
   .header__theme-menu {
